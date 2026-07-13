@@ -216,7 +216,7 @@ const Hero = () => {
           flex-wrap: wrap;
           align-items: center;
           gap: 1rem;
-          margin-bottom: 1.5rem;
+          margin-bottom: 2rem;
         }
         .btn-primary {
           display: inline-flex;
@@ -279,18 +279,19 @@ const Hero = () => {
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
         
+        /* Social Icons - Only icons, no text */
         .hero-socials {
           display: flex;
           align-items: center;
           gap: 0.8rem;
-          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
         }
         .hero-socials a {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 44px;
-          height: 44px;
+          width: 48px;
+          height: 48px;
           border-radius: 50%;
           background: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.06);
@@ -305,49 +306,6 @@ const Hero = () => {
           border-color: transparent;
           transform: translateY(-4px) scale(1.05);
           box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
-        }
-        
-        /* Contact Info Section - Proper Icons */
-        .hero-contact-info {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.8rem 1.5rem;
-          padding-top: 1.2rem;
-          border-top: 1px solid rgba(255, 255, 255, 0.06);
-        }
-        .hero-contact-info .contact-item {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          color: #a0a0a0;
-          text-decoration: none;
-          font-size: 0.85rem;
-          transition: all 0.3s ease;
-          padding: 0.3rem 0.8rem;
-          border-radius: 8px;
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .hero-contact-info .contact-item:hover {
-          color: #8b5cf6;
-          background: rgba(99, 102, 241, 0.08);
-          border-color: rgba(99, 102, 241, 0.2);
-          transform: translateY(-2px);
-        }
-        .hero-contact-info .contact-item .icon-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 28px;
-          height: 28px;
-          border-radius: 6px;
-          background: rgba(99, 102, 241, 0.1);
-          color: #8b5cf6;
-          flex-shrink: 0;
-        }
-        .hero-contact-info .contact-item .icon-wrapper svg {
-          width: 14px;
-          height: 14px;
         }
         
         .scroll-indicator {
@@ -386,9 +344,6 @@ const Hero = () => {
           .hero-socials {
             justify-content: center;
           }
-          .hero-contact-info {
-            justify-content: center;
-          }
           .hero-image-container {
             max-width: 400px;
             height: 400px;
@@ -425,15 +380,9 @@ const Hero = () => {
           .hero-title {
             font-size: 2.5rem;
           }
-          .hero-contact-info {
-            flex-direction: column;
-            align-items: center;
-            gap: 0.6rem;
-          }
-          .hero-contact-info .contact-item {
-            width: 100%;
-            max-width: 280px;
-            justify-content: center;
+          .hero-socials a {
+            width: 42px;
+            height: 42px;
           }
         }
         @media (max-width: 480px) {
@@ -445,6 +394,14 @@ const Hero = () => {
           }
           .hero-section {
             padding: 30px 0 40px;
+          }
+          .hero-socials a {
+            width: 38px;
+            height: 38px;
+          }
+          .hero-socials a svg {
+            width: 18px;
+            height: 18px;
           }
         }
       `}</style>
@@ -543,6 +500,7 @@ const Hero = () => {
                 </a>
               </motion.div>
 
+              {/* Social Icons - Only icons, no text */}
               <motion.div
                 className="hero-socials"
                 initial={{ opacity: 0, y: 20 }}
@@ -555,7 +513,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                 >
-                  <Github size={20} />
+                  <Github size={22} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/zohaib-younis/"
@@ -563,7 +521,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={22} />
                 </a>
                 <a
                   href="https://www.instagram.com/zohaib.mayo_/"
@@ -571,46 +529,21 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   aria-label="Instagram"
                 >
-                  <Instagram size={20} />
+                  <Instagram size={22} />
                 </a>
-              </motion.div>
-
-              {/* Contact Information with Proper Icons */}
-              <motion.div
-                className="hero-contact-info"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-              >
-                <a href="https://wa.me/923245454800" target="_blank" rel="noopener noreferrer" className="contact-item">
-                  <span className="icon-wrapper">
-                    <Phone size={14} />
-                  </span>
-                  +92 324 5454800
+                <a
+                  href="https://wa.me/923245454800"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                >
+                  <Phone size={22} />
                 </a>
-                <a href="mailto:mr.zohaibyounus@gmail.com" className="contact-item">
-                  <span className="icon-wrapper">
-                    <Mail size={14} />
-                  </span>
-                  mr.zohaibyounus@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/zohaib-younis/" target="_blank" rel="noopener noreferrer" className="contact-item">
-                  <span className="icon-wrapper">
-                    <Linkedin size={14} />
-                  </span>
-                  LinkedIn
-                </a>
-                <a href="https://github.com/Zohaib-Younis" target="_blank" rel="noopener noreferrer" className="contact-item">
-                  <span className="icon-wrapper">
-                    <Github size={14} />
-                  </span>
-                  GitHub
-                </a>
-                <a href="https://www.instagram.com/zohaib.mayo_/" target="_blank" rel="noopener noreferrer" className="contact-item">
-                  <span className="icon-wrapper">
-                    <Instagram size={14} />
-                  </span>
-                  Instagram
+                <a
+                  href="mailto:mr.zohaibyounus@gmail.com"
+                  aria-label="Email"
+                >
+                  <Mail size={22} />
                 </a>
               </motion.div>
             </motion.div>
