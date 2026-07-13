@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X, Code2, Github, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import CV from '../../assets/Zohaib Younis (1).pdf';
+import CV from '../../assets/Zohaib Younis Portfolio.pdf';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

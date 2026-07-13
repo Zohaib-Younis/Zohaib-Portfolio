@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 // Import image and PDF properly
 import ZohaibImage from '../../assets/zohaib-profile.jpeg'
-import CV from '../../assets/Zohaib Younis (1).pdf';
+import CV from '../../assets/Zohaib Younis Portfolio.pdf';
 
 const Hero = () => {
   return (
