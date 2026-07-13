@@ -52,7 +52,7 @@ const Hero = () => {
         .hero-wrapper {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 4rem;
+          gap: 3rem;
           align-items: center;
         }
         
@@ -65,8 +65,8 @@ const Hero = () => {
         .hero-image-container {
           position: relative;
           width: 100%;
-          max-width: 480px;
-          height: 480px;
+          max-width: 450px;
+          height: 450px;
           border-radius: 24px;
           overflow: hidden;
           background: linear-gradient(135deg, #6366f1, #8b5cf6);
@@ -107,32 +107,32 @@ const Hero = () => {
           border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .floating-element:nth-child(1) {
-          width: 80px;
-          height: 80px;
-          top: -30px;
-          right: -30px;
+          width: 70px;
+          height: 70px;
+          top: -25px;
+          right: -25px;
           animation-delay: 0s;
           background: rgba(99, 102, 241, 0.12);
         }
         .floating-element:nth-child(2) {
-          width: 60px;
-          height: 60px;
-          bottom: -25px;
-          left: -25px;
+          width: 50px;
+          height: 50px;
+          bottom: -20px;
+          left: -20px;
           animation-delay: 2s;
           background: rgba(139, 92, 246, 0.15);
         }
         .floating-element:nth-child(3) {
-          width: 40px;
-          height: 40px;
+          width: 35px;
+          height: 35px;
           top: 50%;
-          right: -40px;
+          right: -35px;
           animation-delay: 4s;
           background: rgba(99, 102, 241, 0.2);
         }
         @keyframes float {
           0% { transform: translateY(0px) scale(1) rotate(0deg); }
-          50% { transform: translateY(-20px) scale(1.1) rotate(180deg); }
+          50% { transform: translateY(-15px) scale(1.1) rotate(180deg); }
           100% { transform: translateY(0px) scale(1) rotate(360deg); }
         }
         
@@ -146,14 +146,14 @@ const Hero = () => {
           gap: 0.5rem;
           background: rgba(99, 102, 241, 0.1);
           border: 1px solid rgba(99, 102, 241, 0.15);
-          padding: 0.4rem 1.2rem;
+          padding: 0.3rem 1rem;
           border-radius: 50px;
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           font-weight: 500;
           color: #8b5cf6;
           letter-spacing: 0.5px;
           backdrop-filter: blur(10px);
-          margin-bottom: 1.2rem;
+          margin-bottom: 1rem;
         }
         .hero-badge .dot {
           width: 6px;
@@ -169,12 +169,12 @@ const Hero = () => {
         }
         
         .hero-title {
-          font-size: clamp(2.8rem, 5vw, 4.8rem);
+          font-size: clamp(2.5rem, 5vw, 4.5rem);
           font-weight: 800;
           line-height: 1.1;
           letter-spacing: -0.03em;
           color: #ffffff;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.3rem;
         }
         .hero-title .text-gradient {
           background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
@@ -191,11 +191,11 @@ const Hero = () => {
         }
         
         .hero-subtitle {
-          font-size: clamp(1.1rem, 2vw, 1.5rem);
+          font-size: clamp(1rem, 2vw, 1.4rem);
           font-weight: 500;
           color: #a0a0a0;
-          min-height: 3rem;
-          margin-bottom: 0.8rem;
+          min-height: 2.5rem;
+          margin-bottom: 0.5rem;
         }
         .hero-subtitle .highlight {
           color: #8b5cf6;
@@ -203,30 +203,30 @@ const Hero = () => {
         }
         
         .hero-description {
-          font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+          font-size: clamp(0.9rem, 1.1vw, 1rem);
           color: #a0a0a0;
           max-width: 500px;
-          line-height: 1.8;
+          line-height: 1.7;
           opacity: 0.85;
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
         }
         
         .hero-cta {
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          gap: 1rem;
-          margin-bottom: 2rem;
+          gap: 0.8rem;
+          margin-bottom: 1.5rem;
         }
         .btn-primary {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          gap: 0.6rem;
-          padding: 0.8rem 2.2rem;
+          gap: 0.5rem;
+          padding: 0.7rem 1.8rem;
           border-radius: 9999px;
           font-weight: 600;
-          font-size: 0.9rem;
+          font-size: 0.85rem;
           background: linear-gradient(135deg, #6366f1, #8b5cf6);
           color: white;
           transition: all 0.3s ease;
@@ -236,6 +236,7 @@ const Hero = () => {
           text-decoration: none;
           position: relative;
           overflow: hidden;
+          white-space: nowrap;
         }
         .btn-primary::before {
           content: '';
@@ -251,7 +252,7 @@ const Hero = () => {
           left: 100%;
         }
         .btn-primary:hover {
-          transform: translateY(-3px);
+          transform: translateY(-2px);
           box-shadow: 0 8px 40px rgba(99, 102, 241, 0.5);
         }
         
@@ -259,11 +260,11 @@ const Hero = () => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          gap: 0.6rem;
-          padding: 0.8rem 2.2rem;
+          gap: 0.5rem;
+          padding: 0.7rem 1.8rem;
           border-radius: 9999px;
           font-weight: 600;
-          font-size: 0.9rem;
+          font-size: 0.85rem;
           background: rgba(255, 255, 255, 0.05);
           color: white;
           border: 1px solid rgba(255, 255, 255, 0.1);
@@ -271,10 +272,11 @@ const Hero = () => {
           cursor: pointer;
           text-decoration: none;
           backdrop-filter: blur(10px);
+          white-space: nowrap;
         }
         .btn-secondary:hover {
           background: rgba(255, 255, 255, 0.1);
-          transform: translateY(-3px);
+          transform: translateY(-2px);
           border-color: rgba(99, 102, 241, 0.3);
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
@@ -283,15 +285,15 @@ const Hero = () => {
         .hero-socials {
           display: flex;
           align-items: center;
-          gap: 0.8rem;
+          gap: 0.6rem;
           flex-wrap: wrap;
         }
         .hero-socials a {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 48px;
-          height: 48px;
+          width: 42px;
+          height: 42px;
           border-radius: 50%;
           background: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.06);
@@ -304,8 +306,12 @@ const Hero = () => {
           background: linear-gradient(135deg, #6366f1, #8b5cf6);
           color: #fff;
           border-color: transparent;
-          transform: translateY(-4px) scale(1.05);
+          transform: translateY(-3px) scale(1.05);
           box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
+        }
+        .hero-socials a svg {
+          width: 18px;
+          height: 18px;
         }
         
         .scroll-indicator {
@@ -325,10 +331,20 @@ const Hero = () => {
         }
         
         /* Responsive */
+        @media (max-width: 1024px) {
+          .hero-wrapper {
+            gap: 2.5rem;
+          }
+          .hero-image-container {
+            max-width: 400px;
+            height: 400px;
+          }
+        }
+        
         @media (max-width: 992px) {
           .hero-wrapper {
             grid-template-columns: 1fr;
-            gap: 2.5rem;
+            gap: 2rem;
             text-align: center;
           }
           .hero-content {
@@ -345,12 +361,12 @@ const Hero = () => {
             justify-content: center;
           }
           .hero-image-container {
-            max-width: 400px;
-            height: 400px;
+            max-width: 380px;
+            height: 380px;
             margin: 0 auto;
           }
           .hero-section {
-            padding: 60px 0 60px;
+            padding: 60px 0 50px;
           }
           .hero-title {
             font-size: clamp(2.5rem, 6vw, 3.5rem);
@@ -358,50 +374,117 @@ const Hero = () => {
         }
         @media (max-width: 768px) {
           .hero-section { 
-            padding: 40px 0 50px;
+            padding: 50px 0 40px;
+          }
+          .hero-container {
+            padding: 0 1.2rem;
           }
           .hero-image-container {
             max-width: 320px;
             height: 320px;
           }
           .hero-cta { 
-            flex-direction: column; 
-            width: 100%; 
-            max-width: 300px; 
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            max-width: 100%;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
+            gap: 0.6rem;
+            flex-wrap: wrap;
           }
           .hero-cta .btn-primary, 
           .hero-cta .btn-secondary { 
-            width: 100%; 
-            justify-content: center; 
+            flex: 1;
+            min-width: 140px;
+            max-width: 200px;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.8rem;
+            justify-content: center;
           }
           .hero-title {
-            font-size: 2.5rem;
-          }
-          .hero-socials a {
-            width: 42px;
-            height: 42px;
-          }
-        }
-        @media (max-width: 480px) {
-          .hero-container { padding: 0 1rem; }
-          .hero-title { font-size: 2.2rem; }
-          .hero-image-container {
-            max-width: 260px;
-            height: 260px;
-          }
-          .hero-section {
-            padding: 30px 0 40px;
+            font-size: 2.2rem;
           }
           .hero-socials a {
             width: 38px;
             height: 38px;
           }
           .hero-socials a svg {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
+          }
+          .hero-subtitle {
+            font-size: 1rem;
+          }
+          .hero-description {
+            font-size: 0.85rem;
+          }
+        }
+        @media (max-width: 480px) {
+          .hero-container { 
+            padding: 0 0.8rem; 
+          }
+          .hero-title { 
+            font-size: 1.8rem; 
+          }
+          .hero-image-container {
+            max-width: 260px;
+            height: 260px;
+          }
+          .hero-section {
+            padding: 40px 0 30px;
+          }
+          .hero-socials a {
+            width: 34px;
+            height: 34px;
+          }
+          .hero-socials a svg {
+            width: 14px;
+            height: 14px;
+          }
+          .hero-socials {
+            gap: 0.4rem;
+          }
+          .hero-cta {
+            flex-direction: column;
+            gap: 0.5rem;
+            max-width: 220px;
+          }
+          .hero-cta .btn-primary, 
+          .hero-cta .btn-secondary { 
+            width: 100%;
+            max-width: 100%;
+            min-width: unset;
+            padding: 0.6rem 1rem;
+            font-size: 0.8rem;
+          }
+          .hero-badge {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.8rem;
+          }
+          .hero-subtitle {
+            font-size: 0.9rem;
+            min-height: 2rem;
+          }
+          .hero-description {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+          }
+          .floating-element {
+            display: none;
+          }
+        }
+        @media (max-width: 380px) {
+          .hero-title {
+            font-size: 1.5rem;
+          }
+          .hero-image-container {
+            max-width: 220px;
+            height: 220px;
+          }
+          .hero-cta {
+            max-width: 180px;
           }
         }
       `}</style>
@@ -485,7 +568,7 @@ const Hero = () => {
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
                 <Link to="/contact" className="btn-primary">
-                  <Mail size={18} />
+                  <Mail size={16} />
                   Hire Me
                 </Link>
                 <a
@@ -495,7 +578,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   download="Zohaib_Younis_CV.pdf"
                 >
-                  <FileText size={18} />
+                  <FileText size={16} />
                   Download CV
                 </a>
               </motion.div>
@@ -513,7 +596,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                 >
-                  <Github size={22} />
+                  <Github size={18} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/zohaib-younis/"
@@ -521,7 +604,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin size={22} />
+                  <Linkedin size={18} />
                 </a>
                 <a
                   href="https://www.instagram.com/zohaib.mayo_/"
@@ -529,7 +612,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   aria-label="Instagram"
                 >
-                  <Instagram size={22} />
+                  <Instagram size={18} />
                 </a>
                 <a
                   href="https://wa.me/923245454800"
@@ -537,13 +620,13 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
                 >
-                  <Phone size={22} />
+                  <Phone size={18} />
                 </a>
                 <a
                   href="mailto:mr.zohaibyounus@gmail.com"
                   aria-label="Email"
                 >
-                  <Mail size={22} />
+                  <Mail size={18} />
                 </a>
               </motion.div>
             </motion.div>
