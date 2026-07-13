@@ -1,0 +1,20 @@
+/* Remove white space */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    overflow-x: hidden;
+}
+
+#root {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    min-height: 100vh;
+}
